@@ -1,0 +1,3 @@
+v1
+{"path":"file:///D:/EFREI/Data_Engineering/LAB4/datalake/raw/source=kafka/topic=sensor-events/year=2026/month=5/day=14/hour=10/part-00000-b33fa6fe-0814-48e2-a91d-fb08dd6dba73.c000.json","size":4209,"isDir":false,"modificationTime":1778728312622,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///D:/EFREI/Data_Engineering/LAB4/datalake/raw/source=kafka/topic=sensor-events/year=2026/month=5/day=14/hour=10/part-00001-d55f5369-cd4f-4dbd-9746-e6db0220b3a8.c000.json","size":5433,"isDir":false,"modificationTime":1778728312622,"blockReplication":1,"blockSize":33554432,"action":"add"}

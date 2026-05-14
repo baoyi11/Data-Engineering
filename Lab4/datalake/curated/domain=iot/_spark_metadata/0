@@ -1,0 +1,4 @@
+v1
+{"path":"file:///D:/EFREI/Data_Engineering/LAB4/datalake/curated/domain=iot/sensor_type=humidity/year=2026/month=5/day=14/part-00000-9e570fd9-0120-4f87-a9ce-267bec231d21.c000.snappy.parquet","size":2112,"isDir":false,"modificationTime":1778728313903,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///D:/EFREI/Data_Engineering/LAB4/datalake/curated/domain=iot/sensor_type=pressure/year=2026/month=5/day=14/part-00001-61d8f97b-51e8-4931-95e5-0fe4ab360e10.c000.snappy.parquet","size":1993,"isDir":false,"modificationTime":1778728313904,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///D:/EFREI/Data_Engineering/LAB4/datalake/curated/domain=iot/sensor_type=temperature/year=2026/month=5/day=14/part-00001-8c979cfd-7630-4fc5-b640-8c8a4ea02966.c000.snappy.parquet","size":1970,"isDir":false,"modificationTime":1778728313928,"blockReplication":1,"blockSize":33554432,"action":"add"}

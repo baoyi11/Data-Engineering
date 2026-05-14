@@ -1,0 +1,12 @@
+{"raw_json":"{\"sensor\": \"humidity\", \"value\": 13.15, \"unit\": \"%\", \"timestamp\": 1778728601571}","kafka_partition":0,"kafka_offset":22,"ingestion_ts":"2026-05-14T11:16:41.571+08:00"}
+{"raw_json":"{\"sensor\": \"humidity\", \"value\": 35.91, \"unit\": \"%\", \"timestamp\": 1778728603205}","kafka_partition":0,"kafka_offset":23,"ingestion_ts":"2026-05-14T11:16:43.205+08:00"}
+{"raw_json":"{\"sensor\": \"humidity\", \"value\": 34.84, \"unit\": \"%\", \"timestamp\": 1778728603673}","kafka_partition":0,"kafka_offset":24,"ingestion_ts":"2026-05-14T11:16:43.673+08:00"}
+{"raw_json":"{\"sensor\": \"humidity\", \"value\": 31.77, \"unit\": \"%\", \"timestamp\": 1778728604372}","kafka_partition":0,"kafka_offset":25,"ingestion_ts":"2026-05-14T11:16:44.372+08:00"}
+{"raw_json":"{\"sensor\": \"humidity\", \"value\": 23.49, \"unit\": \"%\", \"timestamp\": 1778728604606}","kafka_partition":0,"kafka_offset":26,"ingestion_ts":"2026-05-14T11:16:44.606+08:00"}
+{"raw_json":"{\"sensor\": \"humidity\", \"value\": 15.12, \"unit\": \"%\", \"timestamp\": 1778728605301}","kafka_partition":0,"kafka_offset":27,"ingestion_ts":"2026-05-14T11:16:45.301+08:00"}
+{"raw_json":"{\"sensor\": \"humidity\", \"value\": 33.51, \"unit\": \"%\", \"timestamp\": 1778728608568}","kafka_partition":0,"kafka_offset":28,"ingestion_ts":"2026-05-14T11:16:48.568+08:00"}
+{"raw_json":"{\"sensor\": \"humidity\", \"value\": 22.95, \"unit\": \"%\", \"timestamp\": 1778728608802}","kafka_partition":0,"kafka_offset":29,"ingestion_ts":"2026-05-14T11:16:48.802+08:00"}
+{"raw_json":"{\"sensor\": \"humidity\", \"value\": 26.29, \"unit\": \"%\", \"timestamp\": 1778728609972}","kafka_partition":0,"kafka_offset":30,"ingestion_ts":"2026-05-14T11:16:49.972+08:00"}
+{"raw_json":"{\"sensor\": \"humidity\", \"value\": 13.3, \"unit\": \"%\", \"timestamp\": 1778728611603}","kafka_partition":0,"kafka_offset":31,"ingestion_ts":"2026-05-14T11:16:51.603+08:00"}
+{"raw_json":"{\"sensor\": \"humidity\", \"value\": 31.19, \"unit\": \"%\", \"timestamp\": 1778728611837}","kafka_partition":0,"kafka_offset":32,"ingestion_ts":"2026-05-14T11:16:51.837+08:00"}
+{"raw_json":"{\"sensor\": \"humidity\", \"value\": 15.75, \"unit\": \"%\", \"timestamp\": 1778728612542}","kafka_partition":0,"kafka_offset":33,"ingestion_ts":"2026-05-14T11:16:52.542+08:00"}

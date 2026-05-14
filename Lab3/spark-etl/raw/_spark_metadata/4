@@ -1,0 +1,3 @@
+v1
+{"path":"file:///D:/EFREI/Data_Engineering/LAB3/spark-etl/raw/part-00000-f6a92160-08be-41f4-9a2b-64bdc9f9ffcd-c000.snappy.parquet","size":2488,"isDir":false,"modificationTime":1778663311379,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///D:/EFREI/Data_Engineering/LAB3/spark-etl/raw/part-00001-d3551d47-45cd-48bf-bc21-7f865daa8250-c000.snappy.parquet","size":2784,"isDir":false,"modificationTime":1778663311260,"blockReplication":1,"blockSize":33554432,"action":"add"}
