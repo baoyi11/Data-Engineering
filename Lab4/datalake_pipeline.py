@@ -1,5 +1,6 @@
 # 1a: mports and SparkSession
-
+import os
+os.environ['HADOOP_HOME'] = r"D:\EFREI\Data_Engineering\LAB\Lab3\hadoop"
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import (
     col, from_json, to_timestamp, expr, year, month, dayofmonth, hour, lit

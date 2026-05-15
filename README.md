@@ -1,6 +1,6 @@
 # Kafka & Spark Data Engineering Labs Overview
 
-This repository contains a comprehensive series of data engineering labs and theoretical exercises focusing on Apache Kafka, Apache Spark Structured Streaming, and Data Lake design. The modules progress from basic cluster provisioning and fault tolerance to robust Python client development, real-time ETL pipelines, and implementing a Medallion data architecture.
+This repository contains a comprehensive series of data engineering labs and theoretical exercises focusing on Apache Kafka, Apache Spark Structured Streaming, Data Lake design, and RESTful API development. The modules progress from basic cluster provisioning and fault tolerance to robust Python client development, real-time ETL pipelines, data lake architecture, and finally, backend API integration.
 
 ---
 
@@ -41,7 +41,7 @@ This module integrates Spark with Kafka to build an end-to-end, real-time stream
 
 * **`BaoyiZhou_20252194_Lab3-report.pdf` & `README.md`:**
 * **Ingestion & Parsing:** Connects PySpark to the Kafka cluster to read raw binary JSON payloads and parse them into structured formats using explicit schemas.
-* **Business Logic:** Filters out null records and flags sensor anomalies (e.g., temperatures $> 35.0^\circ\text{C}$ or humidity $> 90.0\%$).
+* **Business Logic:** Filters out null records and flags sensor anomalies.
 * **Windowed Aggregation:** Groups the data stream into 5-minute time windows based on event time, applying a 2-minute watermark to safely drop late-arriving data and clear state memory.
 * **Storage:** Outputs the aggregated results continuously into Parquet files while managing state recovery via checkpoint directories.
 
@@ -64,9 +64,9 @@ This module introduces the Medallion Architecture (Bronze, Silver, Gold zones) t
 
 * **`BaoyiZhou_20252194_Lab4-report.pdf` & `README.md`:**
 * **Raw Zone (Bronze):** Ingests raw streaming events from Kafka and saves them immutably as JSON files, partitioned by ingestion time.
-* **Curated Zone (Silver):** Parses the JSON data, applies data quality filters, and writes the output as Snappy-compressed Parquet files, partitioned by event time (`sensor_type`, `year`, `month`, `day`).
-* **Consumption Zone (Gold):** Uses a batch Spark job to read the curated data and aggregate it into daily sensor metrics (averages, min, max, anomaly counts).
-* **Querying & Partition Pruning:** Registers the curated data as a Spark SQL temporary view and provides a benchmark proving a **4.3x speedup** when utilizing partition pruning compared to a full table scan.
+* **Curated Zone (Silver):** Parses the JSON data, applies data quality filters, and writes the output as Snappy-compressed Parquet files, partitioned by event time.
+* **Consumption Zone (Gold):** Uses a batch Spark job to read the curated data and aggregate it into daily sensor metrics.
+* **Querying & Partition Pruning:** Registers the curated data as a Spark SQL temporary view and provides a benchmark proving a 4.3x speedup when utilizing partition pruning.
 
 
 * **`BaoyiZhou_20252194_Exercises4.pdf` (Theoretical Exercises):**
@@ -80,14 +80,39 @@ This module introduces the Medallion Architecture (Bronze, Silver, Gold zones) t
 
 ---
 
+## 📂 Lab 5: APIs & Web Services and Comprehensive System Evaluation
+
+This final module focuses on building a RESTful API backend to connect the data lake and message broker, alongside a comprehensive end-to-end evaluation of the entire data engineering system.
+
+**Included Files:**
+
+* **`BaoyiZhou_20252194_Lab5-report.pdf` & `README.md`:**
+* **RESTful API Backend Development:** Built a sensor data REST API using Python and the Flask framework. It features standard endpoints for service health checks (`GET /api/v1/health`), retrieving all known sensor types from the Curated layer of the data lake (`GET /api/v1/sensors`), fetching real-time data for a specified sensor from Kafka (`GET /api/v1/sensors/<sensor_type>/latest`), and aggregating daily statistics from the data lake (`GET /api/v1/sensors/<sensor_type>/stats`).
+* **Data Ingestion Endpoint:** Includes a `POST /api/v1/readings` endpoint to receive JSON payloads, perform field validation, and publish new sensor readings to a Kafka topic.
+* **Error Handling:** Implements a global HTTP error handler to ensure that 404, 405, and 500 errors all return JSON responses in a consistent format.
+* **Key Takeaways:** Highlights that standard HTTP status codes form the foundation for coordinated operation of network infrastructure, and demonstrates that a deep understanding of idempotency is crucial for building fault-tolerant systems.
+
+
+* **`BaoyiZhou_20252194_ComprehensiveSynthesisExercises.pdf` (Theoretical Exercises):**
+* **Message Broker (Kafka):** Calculated expected order volume and variance under load balancing conditions, and analyzed data skew, hot partitioning, and the CAP theorem.
+* **Stream Processing (Spark Streaming):** Applied Amdahl’s Law to analyze the actual benefits of increasing parallelism, analyzed the memory footprint of sliding windows, and established cost thresholds between stream and batch processing.
+* **Data Lake Storage (S3 & Parquet):** Compared column pruning and compression efficiencies of CSV and Parquet formats, showing that high-cardinality partition keys lead to the "small-file problem".
+* **End-to-End System Evaluation:** Calculated the overall maximum throughput bottleneck, end-to-end latency distribution, and overall data loss rate by integrating Kafka, Spark, and S3.
+
+
+* **`app.py`, `kafka_utils.py`, `lake_utils.py`:** Python source code handling the Flask application logic and backend connections.
+* **`docker-compose.yml`:** Docker configuration for provisioning the Kafka cluster.
+
+---
+
 ### 🛠️ Prerequisites & Setup
 
 To successfully run the code and clusters across these labs, your local environment requires:
 
 * **Docker & Docker Compose:** To provision the Kafka Brokers and Kafka UI.
-* **Python 3.x:** To execute the producer, consumer, and Spark pipeline scripts.
+* **Python 3.x:** To execute the producer, consumer, PySpark pipelines, and Flask API scripts.
 * **Python Dependencies:** Install the required libraries via pip:
 ```bash
-pip install kafka-python-ng pyspark==3.5.3
+pip install kafka-python-ng pyspark==3.5.3 flask
 
 ```
