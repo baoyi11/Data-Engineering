@@ -1,0 +1,7 @@
+{"sensor":"temperature","value":32.97,"unit":"C","timestamp":1779151008464,"source":"site-A-rack-12","anomaly":false,"event_time":"2026-05-19T08:36:48.464+08:00"}
+{"sensor":"temperature","value":32.41,"unit":"C","timestamp":1779151008679,"source":"site-A-rack-12","anomaly":false,"event_time":"2026-05-19T08:36:48.679+08:00"}
+{"sensor":"temperature","value":19.92,"unit":"C","timestamp":1779151009095,"source":"site-A-rack-12","anomaly":false,"event_time":"2026-05-19T08:36:49.095+08:00"}
+{"sensor":"pressure","value":1025.45,"unit":"hPa","timestamp":1779151009512,"source":"site-A-rack-12","anomaly":false,"event_time":"2026-05-19T08:36:49.512+08:00"}
+{"sensor":"pressure","value":1057.37,"unit":"hPa","timestamp":1779151009718,"source":"site-A-rack-12","anomaly":true,"event_time":"2026-05-19T08:36:49.718+08:00"}
+{"sensor":"pressure","value":989.14,"unit":"hPa","timestamp":1779151009929,"source":"site-A-rack-12","anomaly":false,"event_time":"2026-05-19T08:36:49.929+08:00"}
+{"sensor":"temperature","value":24.35,"unit":"C","timestamp":1779151010143,"source":"site-A-rack-12","anomaly":false,"event_time":"2026-05-19T08:36:50.143+08:00"}
